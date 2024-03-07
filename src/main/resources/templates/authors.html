@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors</title>
+</head>
+<body>
+
+<h1>Author List</h1>
+<table>
+    <tr>
+        <th>Author ID</th>
+        <th>Author First Name</th>
+        <th>Author Last Name</th>
+    </tr>
+    <!--/*@thymesVar id="author" type="guru.springframework.spring6webapp.domain.Author"*/-->
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.id}"></td>
+        <td th:text="${author.firstName}"></td>
+        <td th:text="${author.lastName}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
